@@ -15,9 +15,6 @@ function errorhandler(error) {
 }
 
 function clickhandler() {
-  // outputDiv.innerText = "random text" + txtInput.value;
-
-  // taking input
   var inputText = txtInput.value;
 
   fetch(getTranslationURL(inputText))
@@ -25,7 +22,6 @@ function clickhandler() {
     .then((json) => {
       var translatedText = json.contents.translated;
       outputDiv.innerText = translatedText;
-      //   console.log(json.contents.translated);
     })
     .catch(errorhandler);
 }
